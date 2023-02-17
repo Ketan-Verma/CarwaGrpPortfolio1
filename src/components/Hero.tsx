@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
+import Grid from "@mui/material/Grid";
 
 export default function Hero() {
   return (
@@ -38,11 +39,22 @@ export default function Hero() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
             esse natus enim aliquam iste accusamus culpa
           </Typography>
-          <Stack direction='row' spacing={42} sx={{backgroundColor: 'white'}}>
-              <IconButton size="large">L</IconButton>
-              <IconButton size="large">C</IconButton>
-              <IconButton size="large">M</IconButton>
-          </Stack>
+          <Box sx={{ width: "100%" }}>
+            <Grid
+              container
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            >
+              <Grid item xs={4}>
+                <Paper sx={{textAlign:'center', p: 1, backgroundColor: 'inherit'}}>L</Paper>
+              </Grid>
+              <Grid item xs={4}>
+                <Paper sx={{textAlign:'center', p: 1, backgroundColor: 'inherit'}}>C</Paper>
+              </Grid>
+              <Grid item xs={4}>
+                <Paper sx={{textAlign:'center', p: 1, backgroundColor: 'inherit'}}>M</Paper>
+              </Grid>
+            </Grid>
+          </Box>
         </Container>
       </Paper>
     </Box>
